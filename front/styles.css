@@ -1,0 +1,23 @@
+.titulo-rojo {
+    color: red;
+    font-size: 40px;
+    margin: 40px;
+}
+
+.btn-primary {
+    background-color: green;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background-color: green;
+    font-weight: bold;
+}
+
+.images {
+    margin-top: 30px;
+    size: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

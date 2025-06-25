@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Deportes"
+  },
+  {
+    "id": 2,
+    "name": "Ciencia de Datos e IA"
+  },
+  {
+    "id": 3,
+    "name": "Abogacía"
+  },
+  {
+    "id": 5,
+    "name": "Sistemas Mecánicos"
+  },
+  {
+    "id": 6,
+    "name": "Sistemas Aeroespaciales"
+  },
+  {
+    "id": 7,
+    "name": "Profesorado de Japonés"
+  },
+  {
+    "id": 8,
+    "name": "Profesorado de Informática"
+  },
+  {
+    "id": 9,
+    "name": "Profesorado de Literatura"
+  }
+]
