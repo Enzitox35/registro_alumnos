@@ -148,6 +148,10 @@ async function getAllCareersService() {
 // Función que registra una nueva carrera a través del formulario HTML ubicado
 // en carreras.html
 async function registerCareer() {
+    Swal.fire({
+        title: 'Registro exitoso',
+        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAz1BMVEX///8A3lf///4A3lUA3Vj///0A31T//f8A3lD7/////v0A31EA3E8A3FIA20wA2Evz//oA003t//YA1kwA1FX2//668c7j/e9E1Xbo/fGq68Iw1GwA1k8A0lgR013E9NdR2YCg67vZ+eSD5KRw3pU81XMz5HNl3497456U56uS5a+r8cMu2Gra+uq48szQ999r3JBS6Ype24Wa6riu5cHV79+/681q1I9JzXnV/+cVyFd77aet3sBn2ptLy3m89dmb4bhJ6H9p6ZUd4mVR6IYj02/1AAANVElEQVR4nO1diX/aOBaWLVnYwQeHDeYy9xASchRmj9nubreT+f//pn1P5rCBoJT2h6389HXaJoRm9PL07k8yIRoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGjeGmf7lwO9oHI/G8IFjFrqiXwshy8v0fgiCdWLfdv21Ay9aRa/rFwJEXNZ9L7gntdg2ODOCx71ePwNMkOUhoNRgwePCZgw+4LHzqVRIyGMTFGcYlHnwJ6PUW9U+ixJNIcYwpEYWzJ2BCj+JhMS0yNOAHySEPcqqvU6l6JX9KjiWSdo9m+U0yAdPInB8CsBObCUe4yyzTWl9+FmMkKAgzyGHfckzOmw+Fr2qXwTchyZ5yToZ0CRlwRIDhQn2SRzVVQnLzzkZIaT/ujdB8059a2z0OMt4GcaYG0foRjvd6bhd9Op+GiapjeycBRrM7jXgK9EyDGw/HBa9wp8CGpiz8BnEhsM2ZXz1PB7NH2IfXSpfRUWv8moI8zLJ1M3bIOzSL4nteraXvt58UdjTYLa2CY4ExHymmjHL5kRdAQl4yVYTlGYcIxWa4X88ie5UrTBM2KcvdUrPCLh/jRn156LX+ROAZHRFDXa8S9Ogv92v3gO8UVEVgoCNuX0qXV6bg6eKwumpM7JPd2hel9xdE4UlnPkSAdHXJLWil3k9HgJmnLHBvDnSQU1JMzSxYOpfFk9sUmYvFN2kFhmGaby7BCiJodBXFO2BtzW0S6B9ZfPuRs+TbVFEMC56odciWsviRCrgktwVvdSrYJJ7n51J1nL7E357a0e0MRQDOsZxQM/lalng15vDiqmgH4U1t5r5ttp5HTL3lagZKSqTkBpcFgsZrcaRkvIR0llVsY6X2CHzVm1MDNSSUYw7nZErS7cpJGs8VLJ5YcGaZ8dtmfMy9luq6Q+BK344acucQLS8x+LHoRogerf6lMkChcEN/54oOjqchB5j0mSUumslZxVgVp0VpZcViJkAc+eNohf743Aw+arFNpPECPxVFXFCOVRAxHtXWi6BEnldyTghyDIBl8oHgaL5TBSbbqf6sCAbxfVLm2vBJiUuKAQzlXEy+ECkZwzjhHIQuUmjJ695wQ35I0dJholFnLX7AQ0abq+hopfB9Gvq0nMjmLyEBk0mqnkZAXAb3SaVOhkoGiFOWCr2f02coUn3KCRrzW7RS70W7eQDrUNq+A9FL/RaRLEtmU8IK/RnClpgCqh5P7BJ7VGkoAWKaD8OMBmT7VGOFBoFleiYlWEo1x/yEZ5MomDfAuJEO6lKBYRIUv8m3q+chKQSxdUPDCiowlTLmS/t/YKAwRJNUDkr3BGeZAMKw0iplgpuUYcM6+fpMlkT5Mwe1Sqmggk3ktMHVekQjanalkHUYlc6qYeiPpyggCpGexyDcirrjnKIExZRsMFtkspY1r+HglHUE6Z6U0LhFcHLSHqj8GXqTVXUn5iidVZcNqCADewtlAuCAmaFRCOomKRdCzuuERXjhCBv+9IJk4FHt4jp3HCTHizerFy7eazUCLsSzpo4ZlgNX24eJPY/zY55bQ5l4b98CqWpGhhpfXhrAU3S2P0vO79f+z1wrtlYSYt6qAib45vboEX+9vfdx/+4lhKINcLalfZlGIc4cXs+kOX8c5citkbXf5upK21aQD2xvvlRe+FnNrEzwQ1qRcmYXHXMwSSPzYsKZCKKePMbk5stknaN2vXpH/8S1jitT67hClj5o4TnZaS0mrRvXPCalhUJNa6Dr/WHDrwyCeKrTlSBl5HJxxm/fZwA2f7d6MDGGfrMC//TgM9jf3PFKpy1L9Hgdsxr3tgMwam1//vtf8SMElAByEbIow8/6B/G0peP6pH5e3fzVO2OkMXqXzWLTG3w5EkDQmLozcU+/ehaLMGrlJe8RkFjXnARAepu0oR8Q8xIXl386+Obydx6mUsSMpxjr4sY83baIMvcxvMpPdvgFJU49CnyPn6AaN3o8bTse19/UNTfOk6kmNXHYHlCiWOkYKP2osTgvacf6KA4a9k5Lax5k04RPZko9IKZ0xig7johh4CF2lzalPZfJ/gG6VZNaYdsr6n3JBS00QI6o50+ONBRNK2i7haoCfc1IpM+xub6FElmkvCM2UKrzuWD7GbrJgKdIAop7Mx42KeDBhmiKqgfd0jMkSrpJx84t2KRScilRS8t7oRI7EGm4a7/4u6yUlthF4zZq3Y3QEIy4/2NrOVuVWo9ZOVJRAyKiRPi+iIxIfLemDGokaWLFEjDTr4lVLhGHkylSeSrz6RFobe+hTynQAmHOEER/Hl3SZ6a6XkPvvqeeg1Gg+n73ka8Ls6cS3Yp0kYLa63VBttBNEVLnHvpJwcqIYWC/Hylkb4mbY6iG121i2zeL/asM39Juh5NyayH9WHwfw846JXyKgUdyClwgtb1DXFOh3E26DRCnpNQpCLvX09RiWKPyQahvN6CvK7A1mg73MvjTsmrx3L9XBwh2cvz/xKrZUyDJFM0QRslRd6/NtrpgBqDxjA4KG+/xvDpxNukn3aDy/k2svP9qXh7kXPe8bZyBX9oL51e9fRwmXsSzByhQVnbgsK3stfFX8HSqae+FHdn2Fi6x74RGSFtkkvfTHGDkziodRGMVee1SsETJtg98V5p3J2268e7DlyQLywxa0iwaigoJJNsJvpOhc9fLPSmW21RI+yMTn0jo4Pa0TDTQgI+k0zRdsfQCh8TtjMcUH/5jDcb5RwNfBI85+TDj1s4gnlfQHSxdFtPFD2pvyMj4+Dywz8SfuIfGeSVR3poSwj4QsBNOQ4XmOTR368WTO7+tF5nNMzzQqxIfvuK0Z+WZQhqdvqZsBY+n+MZuN38ZruXzEHBpH2IE+U4ZwdrWFR3AnJm38/5KSvUG+U8zWMgOYoGsXWOfKcybFLEc+Y2FTr46p0mKjTsZN7/Eubz7aOggd+M33w+cRGNwX6NoMQ/E7HL8mjurqUyzUpjxfN0oKOrD2nKdyoVZvZ+qYwm389wl6uz9J3mud5h/t3IB+o/l8ICDxgejs+B9n479SIg93bPWeQhOJbp7egHgnPskrFGoxXPaONMY4kawa4Qbm2r+kMb4O23o7eL+URZnIyAGMu8u+tStXjL7Sg1MY7eGn4JD59h6oDHlUuHSfNUqCMRYxzVVKJ5Natg2M/9P8MMo5tRinGihCJKcxSjLsqEey9/hoL5ixX26rb3HYIS6apdrh26xfjyKUGwTB/jRbfJ8qHQfh1h44PuNMjSY2hlg4VjURkn1IN4MUnp2wcZ7dEU6cAH1jrrFzSfkADq4MXFA+XY/145tZ5nZE3OsHubfs7vsmBTtCxnYTp3YixzOdWsv8zEvQHsIHTynGTdDjP8KSntad5IQkljhvcdtMa3wqUyP8f5f+MWNJ+QAwPdw2VviiqDrBWR/igY73fv/UOCuuM7lStb28PBZsbFS6rEzSSMvr0Zu0w7eOj2DwoV84lOyVKZI4zkVzvQwW/byQ013PuXMFc20WtoODcFFPcSjj0P/xIJGp6l8Ed5mhcEwtLfdCjzNbA5v6RtKpCQ9xqvfq4n19yU1QR3AF/jybh3b+hoDFFMPY2DXJEVTEttgime+mkNfEmLLK2S6y940v7QojNcPD9Reh2SxZkOzYke8Veze2SEeH6i7AJi730YyCby6blBf0lGdvaN9qqtxuM2nI9ctEIN/5U85Mik1cEE+U6ll9ASNRSTzHRF71TcGnRQa72Fg/rSC4gSNo4finJOwF6jDUGDpZwGDI17vlP5ZSRpCX8RPHly4t19HkJEwSpSQTiBSZ1dzt1oOCTTIHWp9A15Cv5CCR+zx9q97E29BWR36YCRJm80vU61/KE+g2EgGSoNnhNhq8wbfBeVfzp3U0eLTu+yr6E0TN0o7f/ZTx+RptR5bPD4XeljCwzReep/DbFZ+k21B4aapJbIqHiCgOLNcMwYdNW7wAoqjI8o0VvMXMF3Ukw87LqRzgcuAXTjTZOJezuUuzodbWqKtKh3pcR2Iu891yH/vu4EWAnwVD+ZW2cE5IxVB9961fQ8dtFrvRKzC3eQgReF8vfVo3QwUc8Id5g03y8T4Qv14Sagad9JgXriPNbvX56ON3a8NCntd0WTVVUJX4LMNqV5o6wuOgnWE0Wv8SeRaw7nKYg0mVfTxzMojWGW+cW8fLffw/ud1PUyCMg0M48xoMbXQUajSAdSOE4IiFt0AmZ42xa4N3vN3NGJ5IuS8Z1+HMh7iv1gPvOouO2/v9nOmNJRmrpPYtoDo1xr/hhFieAeUG8xPzx4kQbK3hd7ACTTKR9mk7JIoRZMdYg3rwQPattgCux9OpaDtaK4lMz78rYV0fCUjxNEVFA7jPFUKUNr3NqgN4pU6lnIUVtxcdnDlhLE7JWCz5+4hEzXxvdw7ttT/1nZRzCdXhXdiz14jCkP7lUted+HRVp9ZlSbown5FqxapOJ8JhtM4Yx8PxmD7/l9UyvB+Z5fDtOsDHsPn8y75GCKg3ifGaa4e+YzJDHvQfRhlG3GfAh4VaAK82sNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NjZ/F/wH3G7WLucxaKAAAAABJRU5ErkJggg==",
+    })
   // Obtiene y limpia el valor ingresado en el campo de nombre de carrera
   const name = document.getElementById('careerName').value.trim();
 
@@ -462,8 +466,8 @@ async function registerStudent() {
         resultContainer.innerHTML = `
             <strong>Registro exitoso!</strong><br><br>
             <strong>ID:</strong> ${result.student.id}<br>
-            <strong>Name:</strong> ${result.student.name}<br>
-            <strong>Career:</strong> ${result.student.career}
+            <strong>Nombre:</strong> ${result.student.name}<br>
+            <strong>Carrera:</strong> ${result.student.career}
         `;
 
         // Limpia los campos del formulario después de un registro exitoso
@@ -560,8 +564,8 @@ async function getStudentsByCareer() {
             studentDiv.classList.add('student-card');
             studentDiv.innerHTML = `
                 <strong>ID:</strong> ${student.id}<br>
-                <strong>Name:</strong> ${student.name}<br>
-                <strong>Career:</strong> ${student.career}
+                <strong>Nombre:</strong> ${student.name}<br>
+                <strong>Carrera:</strong> ${student.career}
             `;
             // Agrega el div del estudiante al contenedor de resultados
             resultContainer.appendChild(studentDiv);
@@ -621,7 +625,7 @@ async function updateStudent() {
         // Llama al servicio para actualizar la información del estudiante con los datos proporcionados
         const result = await updateStudentService(id, name, career);
         // Muestra el mensaje de éxito de la respuesta en el contenedor de resultados
-        resultContainer.textContent = result.message || "Student updated successfully.";
+        resultContainer.textContent = result.message || "Estudiante actualizado de manera exitosa.";
     } catch (error) {
         // En caso de error al actualizar el estudiante, muestra un mensaje de error en la interfaz
         console.error("Error al actualizar estudiante:", error);
