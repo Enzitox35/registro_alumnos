@@ -196,3 +196,32 @@ This must be included in every request.
 
 **Happy coding! 🚀**
 
+const career = document.getElementById('registerCareer').value.trim();
+    const resultContainer = document.getElementById('registerResult');
+
+    
+    if (!name || !career) {
+        alert("Please fill in both Name and Career fields.");
+        return;
+    }
+
+    try {
+        const result = await registerStudentService(name, career);
+
+        // Mostrar la respuesta de forma permanente
+        resultContainer.innerHTML = `
+            <strong>Registration Successful!</strong><br><br>
+            <strong>ID:</strong> ${result.student.id}<br>
+            <strong>Name:</strong> ${result.student.name}<br>
+            <strong>Career:</strong> ${result.student.career}
+        `;
+
+        // Limpia los inputs
+        document.getElementById('registerName').value = '';
+        document.getElementById('registerCareer').value = '';
+
+    } catch (error) {
+        console.error("Error registering student:", error);
+        resultContainer.textContent = "Failed to register student.";
+    }
+}

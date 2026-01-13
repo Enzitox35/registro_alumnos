@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Marcelo Gallardo",
+    "career": "Deportes"
+  },
+  {
+    "id": 2,
+    "name": "Enzo Fernández",
+    "career": "Deportes"
+  },
+  {
+    "id": 3,
+    "name": "Ian Subiabre",
+    "career": "Deportes"
+  },
+  {
+    "id": 4,
+    "name": "Franco Mastantuono",
+    "career": "Deportes"
+  },
+  {
+    "id": 5,
+    "name": "Enzo Francescoli",
+    "career": "Administración de Empresas"
+  },
+  {
+    "id": 6,
+    "name": "Facundo Colidio",
+    "career": "Deportes"
+  },
+  {
+    "id": 7,
+    "name": "Gonzalo Martínez",
+    "career": "Deportes"
+  },
+  {
+    "id": 8,
+    "name": "Milton Casco",
+    "career": "Deportes"
+  },
+  {
+    "id": 9,
+    "name": "Rodrigo Aliendro",
+    "career": "Deportes"
+  }
+]
